@@ -1,0 +1,26 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'View for Attachment'
+define view entity zetudi_att_tab_i as select from zetudi_att_tab
+association to parent zetudi_hdr_tab_I as _Student
+    on $projection.Id = _Student.Id {
+    
+    key zetudi_att_tab.attach_id as AttachId,
+    zetudi_att_tab.id as Id,
+    @EndUserText.label: 'Comments'
+    zetudi_att_tab.comments as Comments,
+    
+    @EndUserText.label: 'Attachments'
+    @Semantics.largeObject:{
+        mimeType: 'Mimetype',
+        fileName: 'Filename',
+        contentDispositionPreference: #INLINE
+    }
+    zetudi_att_tab.attachment as Attachment,
+    @EndUserText.label: 'File Type'
+    zetudi_att_tab.mimetype as Mimetype,
+    @EndUserText.label: 'File Name'
+    zetudi_att_tab.filename as Filename,
+    
+    _Student.Lastchangedat as LastChangedat,
+    _Student // Make association public
+}

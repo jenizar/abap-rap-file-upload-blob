@@ -1,0 +1,30 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Interface View Entity for Student'
+define root view entity zetudi_hdr_tab_I as select from zetudi_hdr_tab
+composition[1..*] of zetudi_att_tab_i as _Attachments 
+{
+    @EndUserText.label: 'Student ID'
+    key zetudi_hdr_tab.id as Id,
+    @EndUserText.label: 'First Name'
+    zetudi_hdr_tab.firstname as Firstname,
+    @EndUserText.label: 'Last Name'
+    zetudi_hdr_tab.lastname as Lastname,
+    @EndUserText.label: 'Age'
+    zetudi_hdr_tab.age as Age,
+    @EndUserText.label: 'Course'
+    zetudi_hdr_tab.course as Course,
+    @EndUserText.label: 'Course Duration'
+    zetudi_hdr_tab.courseduration as Courseduration,
+    @EndUserText.label: 'Status'
+    zetudi_hdr_tab.status as Status,
+    @EndUserText.label: 'Gender'
+    zetudi_hdr_tab.gender as Gender,
+    @EndUserText.label: 'DOB'
+    
+    zetudi_hdr_tab.dob as Dob,
+    zetudi_hdr_tab.lastchangedat as Lastchangedat,
+    zetudi_hdr_tab.locallastchangedat as Locallastchangedat,
+    
+    
+    _Attachments // Make association public
+}

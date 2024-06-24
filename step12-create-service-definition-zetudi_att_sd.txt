@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition'
+define service ZETUDI_ATT_SD {
+  expose zetudi_att_tabl_p;
+  expose zetudi_att_tab_p;
+}

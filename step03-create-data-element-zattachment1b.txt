@@ -1,0 +1,12 @@
+Data Element: ZATTACHMENT1B
+
+Data Type Information:
+Category : Predefined Type
+Data Type: RAWSTRING
+Length: 0
+
+Field Labels
+Short : Attach.
+Medium : Attachment
+Long : Attachment
+Heading : Attachment

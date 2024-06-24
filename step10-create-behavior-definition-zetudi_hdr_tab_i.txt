@@ -1,0 +1,62 @@
+managed implementation in class zbp_etudi_hdr_tab_i unique;
+strict ( 1 ); with draft;
+define behavior for zetudi_hdr_tab_I alias Student
+persistent table zetudi_hdr_tab
+draft table zetudi_h_d_tab
+lock master
+total etag Locallastchangedat
+authorization master ( global )
+etag master Lastchangedat
+{
+  create;
+  update;
+  delete;
+  association _Attachments { create; with draft; }
+  field ( numbering : managed, readonly ) Id;
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  //Kopyalama için  FACTORY ACTION ekleme
+  factory action copyStudent[1];
+
+  static factory action createStudent[1];
+
+  mapping for zetudi_hdr_tab
+  {
+    Id = id;
+    Firstname = firstname;
+    Lastname = lastname;
+    Age = age;
+    Course = course;
+    Courseduration = courseduration;
+    Dob = dob;
+    Gender = gender;
+    Lastchangedat = lastchangedat;
+    Locallastchangedat = locallastchangedat;
+    Status = status;
+  }
+}
+
+define behavior for zetudi_att_tab_i alias Attachments
+persistent table zetudi_att_tab
+draft table zetudi_a_d_tab
+lock dependent by _Student
+authorization dependent by _Student
+etag master LastChangedat
+{
+  update;
+  delete;
+  field ( readonly ) Id;
+  association _Student { with draft; }
+  mapping for zetudi_att_tab{
+    AttachId    = attach_id;
+    Attachment  = attachment;
+    Comments    = comments;
+    Filename    = filename;
+    Id          = id;
+    Mimetype    = mimetype;
+  }
+}

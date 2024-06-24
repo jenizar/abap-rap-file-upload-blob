@@ -1,0 +1,18 @@
+@EndUserText.label : 'Attachment Draft Table'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zetudi_a_d_tab {
+
+  key mandt     : mandt not null;
+  key attachid  : char32 not null;
+  id            : sysuuid_x16;
+  comments      : char30;
+  attachment    : zattachment1;
+  mimetype      : char128;
+  filename      : char128;
+  lastchangedat : timestampl;
+  "%admin"      : include sych_bdl_draft_admin_inc;
+
+}

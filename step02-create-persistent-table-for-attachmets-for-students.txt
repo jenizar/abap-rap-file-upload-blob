@@ -1,0 +1,16 @@
+@EndUserText.label : 'Attachment Table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zstudent_att_tab {
+
+  key client    : abap.clnt not null;
+  key attach_id : char32 not null;
+  id            : sysuuid_x16 not null;
+  comments      : char30;
+  attachment    : zattachment1;
+  mimetype      : char128;
+  filename      : char128;
+
+}

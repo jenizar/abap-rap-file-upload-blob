@@ -1,0 +1,22 @@
+@EndUserText.label : 'Draft table header student'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zetudi_h_d_tab {
+
+  key mandt          : mandt not null;
+  key id             : sysuuid_x16 not null;
+  firstname          : abap.char(100);
+  lastname           : abap.char(100);
+  age                : abap.numc(4);
+  course             : abap.char(50);
+  courseduration     : abap.numc(4);
+  status             : abap_boolean;
+  gender             : abap.char(1);
+  dob                : abap.dats;
+  lastchangedat      : timestampl;
+  locallastchangedat : timestampl;
+  "%admin"           : include sych_bdl_draft_admin_inc;
+
+}
