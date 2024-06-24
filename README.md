@@ -1,6 +1,8 @@
 # abap-rap-file-upload-blob
 ABAP Restful Application Programming Model - File Upload - Large Objects LOB
 
+![alt text](https://github.com/jenizar/abap-rap-file-upload-blob/blob/main/screenshot/pic3.png)
+
 step01-create-presistent-table-for-students.txt
 
 step02-create-persistent-table-for-attachmets-for-students.txt
