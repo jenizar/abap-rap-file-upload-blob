@@ -29,6 +29,10 @@ step13-create-class-zbp_etudi_hdr_tab_i-global-class.txt
 
 step14-create-class-zbp_etudi_hdr_tab_i-local-types.txt
 
+![alt text](https://github.com/jenizar/abap-rap-file-upload-blob/blob/main/screenshot/pic1.png)
+
+![alt text](https://github.com/jenizar/abap-rap-file-upload-blob/blob/main/screenshot/pic2.png)
+
 References:
 
 1. https://wordpress.com/post/sapcloudapps.wordpress.com/307
