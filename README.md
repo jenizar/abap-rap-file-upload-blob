@@ -41,7 +41,7 @@ step14-create-class-zbp_etudi_hdr_tab_i-local-types.txt
 
 References:
 
-1. https://wordpress.com/post/sapcloudapps.wordpress.com/307
+1. https://sapcloudapps.wordpress.com/2024/06/17/abap-rap-file-upload-large-objects-lob/
 
 2. https://community.sap.com/t5/technology-blogs-by-members/abap-restful-application-programming-model-rap-abap-rap-file-upload-large/ba-p/13564925
 
